@@ -11,7 +11,7 @@ class Question(models.Model):
         return self.question_text
 
     # Adding a custom model
-    def was_publisjed_recently(self):
+    def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
 class Choice(models.Model):
