@@ -12,11 +12,10 @@
     <fieldset>
         <legend><h1>{{ question.question_text }}</h1></legend>
         {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-        <ul>
-            {% for choice in question.choice_set.all %}
-                <li>{{ choice.choice_text }}</li>
-            {% endfor %}
-        </ul>
+        
+        {% for choice in question.choice_set.all %}
+            <li>{{ choice.choice_text }}</li>
+        {% endfor %}
     </fieldset>
     </form>
 </body>
