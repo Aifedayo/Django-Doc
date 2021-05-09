@@ -32,4 +32,8 @@ def vote(request, question_id):
             'question': question,
             'error_message': "You did not select a choice"
         })
+    else:
+        selected_choice.votes += 1
+        selected_choice.save()
+        
     return HttpResponse("You are voting on question %s." % question_id)
