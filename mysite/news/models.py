@@ -50,3 +50,4 @@ class Album(models.Model):
 
 class Runner(models.Model):
     MedalType = models.TextChoices('MedalType', 'GOLD SILVER BRONZE')
+    name = models.CharField(max_length=60)
