@@ -49,4 +49,4 @@ class Album(models.Model):
 # Using enumeration classes to define choices in a concise way
 
 class Runner(models.Model):
-    
+    MedalType = models.TextChoices('MedalType', 'GOLD SILVER BRONZE')
