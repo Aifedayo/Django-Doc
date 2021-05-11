@@ -44,3 +44,9 @@ class Album(models.Model):
     name = models.CharField(max_length=100)
     release_date = models.DateField()
     num_stars = models.IntegerField()
+
+
+# Using enumeration classes to define choices in a concise way
+
+class Runner(models.Model):
+    
