@@ -26,7 +26,7 @@ class Person(models.Model):
         ('L', 'Large')
     )
 
-    first_name = models.CharField(max_length=30)
+    first_name = models.CharField("person's first name", max_length=30)
     last_name = models.CharField(max_length=30)
     shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)
 #End of Person Model
