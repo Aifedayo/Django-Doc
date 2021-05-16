@@ -57,6 +57,9 @@ class Runner(models.Model):
 class Fruit(models.Model):
     name = models.CharField(max_length=100, primary_key=True)
 
+"""
+Declaring a many to one relationship
+"""
 
 class Manufacturer(models.Model):
     pass
@@ -64,3 +67,7 @@ class Manufacturer(models.Model):
 
 class Car(models.Model):
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
+
+
+class Topping(models..Model):
+    
