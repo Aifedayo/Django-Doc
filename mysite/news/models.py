@@ -29,7 +29,7 @@ class Person(models.Model):
     first_name = models.CharField("person's first name", max_length=30)
     last_name = models.CharField(max_length=30)
     shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)
-#End of Person Model
+    #End of Person Model
 
 
 class Musician(models.Model):
@@ -56,3 +56,11 @@ class Runner(models.Model):
 
 class Fruit(models.Model):
     name = models.CharField(max_length=100, primary_key=True)
+
+
+class Manufacturer(models.Model):
+    pass
+
+
+class Car(models.Model):
+    manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
