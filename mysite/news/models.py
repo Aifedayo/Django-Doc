@@ -69,7 +69,7 @@ class Car(models.Model):
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
 
 
-class Topping(models..Model):
+class Topping(models.Model):
     pass
 
 class Pizza(models.Model):
