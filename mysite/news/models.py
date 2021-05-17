@@ -70,4 +70,7 @@ class Car(models.Model):
 
 
 class Topping(models..Model):
-    
+    pass
+
+class Pizza(models.Model):
+    toppings = models.ManyToManyField(Topping)
