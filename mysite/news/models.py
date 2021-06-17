@@ -9,3 +9,5 @@ class Reporter(models.Model):
 
 class Article(models.Model):
     pub_date = models.DateField()
+    headline = models.CharField(max_length=200)
+    
