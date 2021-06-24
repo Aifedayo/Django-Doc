@@ -6,3 +6,5 @@
 <h1>Articles for {{ year }}</h1>
 
 {% for article in article_list %}
+    <p>{{ article.headline }}</p>
+    <p>By {{ article.reporter.full_name }}</p>
