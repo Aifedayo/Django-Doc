@@ -18,4 +18,4 @@ class Article(models.Model):
 
 
 class Person(models.Model):
-    
+    first_name = models.CharField(max_length=30)
