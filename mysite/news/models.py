@@ -25,4 +25,4 @@ class Person(models.Model):
 #End of Person Model
 
 class Musician(models.Model):
-    
+    first_name = models.CharField(max_length=50)
