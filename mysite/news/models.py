@@ -21,7 +21,9 @@ Practicing Django Models
 """
 class Person(models.Model):
     SHIRT_SIZES = (
-        
+        ('S', 'Small'),
+        ('M', 'Medium'),
+        ('L', 'Large')
     )
 
     first_name = models.CharField(max_length=30)
