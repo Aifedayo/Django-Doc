@@ -28,6 +28,7 @@ class Person(models.Model):
 
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
+    shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)
 #End of Person Model
 
 class Musician(models.Model):
