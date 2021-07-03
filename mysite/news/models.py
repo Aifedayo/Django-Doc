@@ -31,6 +31,7 @@ class Person(models.Model):
     shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)
 #End of Person Model
 
+
 class Musician(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
