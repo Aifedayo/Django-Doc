@@ -7,6 +7,10 @@
     <title>Polls Results</title>
 </head>
 <body>
-    
+    <h1>{{ question.question.text }}</h1>
+
+    <ul>
+        {% for choice in question.choice_set.all %}
+    </ul>
 </body>
 </html>
