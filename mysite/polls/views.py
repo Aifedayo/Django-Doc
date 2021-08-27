@@ -1,12 +1,13 @@
 from django import template
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
+from django.views import generic
 
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 #from django.template import loader
 from .models import Choice, Question
 
-def index(request):
+class IndexView(generic.ListView):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     # template = loader.get_template('polls/index.html')
     context = {
