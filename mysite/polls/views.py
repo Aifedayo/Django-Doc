@@ -16,8 +16,9 @@ class IndexView(generic.ListView):
     # context = {
     #     'latest_question_list': latest_question_list
     # }
-    #return HttpResponse(template.render(context, request))
-    return render(request, 'polls/index.html', context)
+    def get_queryset(self):
+        """Return the last five published questions"""
+        return Question.objects.order_by('-pub_date')[:5]
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
