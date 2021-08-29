@@ -20,11 +20,10 @@ class IndexView(generic.ListView):
         """Return the last five published questions"""
         return Question.objects.order_by('-pub_date')[:5]
 
-def DetailView(generic.DetailsView):
+class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/detail.html', {'question': question})
+
 
 def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
