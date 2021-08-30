@@ -25,7 +25,7 @@ class DetailView(generic.DetailView):
     template_name = 'polls/detail.html'
 
 
-def results(request, question_id):
+class ResultsView(generic.DetailView):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, 'polls/results.html', {'question': question})
 
