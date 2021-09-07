@@ -16,3 +16,5 @@ class QuestionModelTests(TestCase):
         old_question = Question(pub_date=time)
         self.assertIs(old_question.was_published_recently(), False)
 
+    def test_was_published_with_recent_question(self):
+        
