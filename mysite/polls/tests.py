@@ -33,5 +33,7 @@ class QuestionModelTests(TestCase):
 
     def create_question(question_text, days):
         """
-        
+        Create a question with the given `questio_text` and published the given number
+        of `days` offset to now (negative for questions published in the past, positive
+        for questions that have yet to be published).
         """
