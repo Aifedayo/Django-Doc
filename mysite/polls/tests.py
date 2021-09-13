@@ -40,3 +40,7 @@ class QuestionModelTests(TestCase):
         time = timezone.now() + datetime.timedelta(days=days)
         return Question.objects.create(question_text=question_text,
         pub_date=time)
+
+
+class QuestionIndexViewTests(TestCase):
+    
