@@ -37,3 +37,4 @@ class QuestionModelTests(TestCase):
         of `days` offset to now (negative for questions published in the past, positive
         for questions that have yet to be published).
         """
+        time = timezone.now() + datetime.timedelta(days=days)
