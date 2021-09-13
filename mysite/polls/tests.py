@@ -38,3 +38,5 @@ class QuestionModelTests(TestCase):
         for questions that have yet to be published).
         """
         time = timezone.now() + datetime.timedelta(days=days)
+        return Question.objects.create(question_text=question_text,
+        pub_date=time)
