@@ -43,4 +43,6 @@ class QuestionModelTests(TestCase):
 
 
 class QuestionIndexViewTests(TestCase):
-    
+    """
+    If no questions exist, an appropriate message is displayed
+    """
