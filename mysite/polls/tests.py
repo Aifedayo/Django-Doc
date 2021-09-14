@@ -46,3 +46,5 @@ class QuestionIndexViewTests(TestCase):
     """
     If no questions exist, an appropriate message is displayed
     """
+    def test_no_questions(self):
+        response = self.client.get(reverse('polls:index'))
