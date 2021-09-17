@@ -54,4 +54,7 @@ class QuestionIndexViewTests(TestCase):
         self.assertQuerysetEqual(response.context['latest_question_list'], [])
 
     def test_past_question(self):
-        
+        """
+        Questions with a pub_date in the past are displayed on the
+        index page.
+        """
