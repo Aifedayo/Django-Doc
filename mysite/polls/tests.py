@@ -64,4 +64,6 @@ class QuestionIndexViewTests(TestCase):
             response.context['latest_question_list'],
             [question],
         )
+    
+    def test_future_question(self):
         
