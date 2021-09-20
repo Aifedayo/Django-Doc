@@ -72,6 +72,7 @@ class QuestionIndexViewTests(TestCase):
         """
         question = create_question(question_text="Future questions.", days=30)
         response = self.client.get(reverse('polls:index'))
+        self.assertContains(response, 'No polls are available')
         self.assertQuerysetEqual(
             response.context['latest_question_list'],
         )
