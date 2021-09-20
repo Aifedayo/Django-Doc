@@ -66,4 +66,7 @@ class QuestionIndexViewTests(TestCase):
         )
     
     def test_future_question(self):
-        
+        """
+        Questions with a pub_date in the future aren't displayed on
+        the index page
+        """
