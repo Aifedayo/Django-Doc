@@ -78,4 +78,7 @@ class QuestionIndexViewTests(TestCase):
         )
 
     def test_future_question_and_past_question(self):
-        
+        """
+        Even if both past and future questions exist, only past questions are
+        displayed.
+        """
