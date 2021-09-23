@@ -84,3 +84,4 @@ class QuestionIndexViewTests(TestCase):
         displayed.
         """
         past_question = create_question(question_text="Past question.", days=-30)
+        future_question = create_question(question_text='Future question.', days=30)
