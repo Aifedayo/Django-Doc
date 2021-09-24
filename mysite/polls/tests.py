@@ -92,4 +92,7 @@ class QuestionIndexViewTests(TestCase):
         )
 
     def test_two_past_questions(self):
-        
+        """
+        The questions index page may display multiple questions
+        """
+        question1 = create_question(question_text="First past question", days=-30)
