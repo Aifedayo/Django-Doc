@@ -96,3 +96,4 @@ class QuestionIndexViewTests(TestCase):
         The questions index page may display multiple questions
         """
         question1 = create_question(question_text="First past question", days=-30)
+        question2 = create_question(question_text="Second past question", days=5)
