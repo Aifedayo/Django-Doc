@@ -102,3 +102,7 @@ class QuestionIndexViewTests(TestCase):
             response.context['latest_question_list'],
             [question2, question1],
         )
+
+
+class QuestionDetailViewTests(TestCase):
+    
