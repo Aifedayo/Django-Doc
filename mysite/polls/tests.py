@@ -112,4 +112,4 @@ class QuestionDetailViewTests(TestCase):
         """
         future_question = create_question(question_text='Future question.', days=5)
         url = reverse('polls:detail', args=(future_question.id,))
-        
+        response = self.client.get(url)
