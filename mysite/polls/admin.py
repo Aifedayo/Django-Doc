@@ -9,7 +9,7 @@ class ChoiceInline(admin.StackedInline):
 class QuestionAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Question information',      {'fields': ['question_text']}),
-        ('Date information',    {'fields': ['pub_date']}),
+        ('Date information',    {'fields': ['pub_date'], 'classes': ['collapse']}),
     ]
 
 admin.site.register(Question, QuestionAdmin)
